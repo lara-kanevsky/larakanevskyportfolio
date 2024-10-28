@@ -2814,7 +2814,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (96:8) {#each social_links as {link, icon}}
+// (95:8) {#each social_links as {link, icon}}
 function create_each_block(ctx) {
 	let li;
 	let a;
@@ -2898,12 +2898,12 @@ function create_fragment(ctx) {
 	let h2;
 	let t0;
 	let t1;
-	let a0;
+	let a;
 	let icon;
 	let t2;
 	let span0;
 	let t3;
-	let a0_href_value;
+	let a_href_value;
 	let t4;
 	let hr;
 	let t5;
@@ -2913,11 +2913,6 @@ function create_fragment(ctx) {
 	let t7_value = new Date().getFullYear() + "";
 	let t7;
 	let t8;
-	let span2;
-	let a1;
-	let t9;
-	let t10;
-	let t11;
 	let ul;
 	let current;
 	icon = new Component$1({ props: { icon: "mdi:envelope" } });
@@ -2940,7 +2935,7 @@ function create_fragment(ctx) {
 			h2 = element("h2");
 			t0 = text(/*heading*/ ctx[1]);
 			t1 = space();
-			a0 = element("a");
+			a = element("a");
 			create_component(icon.$$.fragment);
 			t2 = space();
 			span0 = element("span");
@@ -2953,11 +2948,6 @@ function create_fragment(ctx) {
 			t6 = text("Copyright ");
 			t7 = text(t7_value);
 			t8 = space();
-			span2 = element("span");
-			a1 = element("a");
-			t9 = text("Primo");
-			t10 = text(" Powered");
-			t11 = space();
 			ul = element("ul");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -2978,15 +2968,15 @@ function create_fragment(ctx) {
 			t0 = claim_text(h2_nodes, /*heading*/ ctx[1]);
 			h2_nodes.forEach(detach);
 			t1 = claim_space(div0_nodes);
-			a0 = claim_element(div0_nodes, "A", { class: true, href: true });
-			var a0_nodes = children(a0);
-			claim_component(icon.$$.fragment, a0_nodes);
-			t2 = claim_space(a0_nodes);
-			span0 = claim_element(a0_nodes, "SPAN", { class: true });
+			a = claim_element(div0_nodes, "A", { class: true, href: true });
+			var a_nodes = children(a);
+			claim_component(icon.$$.fragment, a_nodes);
+			t2 = claim_space(a_nodes);
+			span0 = claim_element(a_nodes, "SPAN", { class: true });
 			var span0_nodes = children(span0);
 			t3 = claim_text(span0_nodes, /*email*/ ctx[0]);
 			span0_nodes.forEach(detach);
-			a0_nodes.forEach(detach);
+			a_nodes.forEach(detach);
 			div0_nodes.forEach(detach);
 			t4 = claim_space(div2_nodes);
 			hr = claim_element(div2_nodes, "HR", {});
@@ -2999,15 +2989,6 @@ function create_fragment(ctx) {
 			t7 = claim_text(span1_nodes, t7_value);
 			span1_nodes.forEach(detach);
 			t8 = claim_space(div1_nodes);
-			span2 = claim_element(div1_nodes, "SPAN", { class: true });
-			var span2_nodes = children(span2);
-			a1 = claim_element(span2_nodes, "A", { href: true, class: true });
-			var a1_nodes = children(a1);
-			t9 = claim_text(a1_nodes, "Primo");
-			a1_nodes.forEach(detach);
-			t10 = claim_text(span2_nodes, " Powered");
-			span2_nodes.forEach(detach);
-			t11 = claim_space(div1_nodes);
 			ul = claim_element(div1_nodes, "UL", { class: true });
 			var ul_nodes = children(ul);
 
@@ -3024,13 +3005,10 @@ function create_fragment(ctx) {
 		h() {
 			attr(h2, "class", "heading");
 			attr(span0, "class", "svelte-i8f0ga");
-			attr(a0, "class", "email svelte-i8f0ga");
-			attr(a0, "href", a0_href_value = "mailto:" + /*email*/ ctx[0]);
+			attr(a, "class", "email svelte-i8f0ga");
+			attr(a, "href", a_href_value = "mailto:" + /*email*/ ctx[0]);
 			attr(div0, "class", "primary svelte-i8f0ga");
 			attr(span1, "class", "copyright svelte-i8f0ga");
-			attr(a1, "href", "https://primo.so");
-			attr(a1, "class", "svelte-i8f0ga");
-			attr(span2, "class", "primo svelte-i8f0ga");
 			attr(ul, "class", "svelte-i8f0ga");
 			attr(div1, "class", "secondary svelte-i8f0ga");
 			attr(div2, "class", "section-container svelte-i8f0ga");
@@ -3042,10 +3020,10 @@ function create_fragment(ctx) {
 			append_hydration(div0, h2);
 			append_hydration(h2, t0);
 			append_hydration(div0, t1);
-			append_hydration(div0, a0);
-			mount_component(icon, a0, null);
-			append_hydration(a0, t2);
-			append_hydration(a0, span0);
+			append_hydration(div0, a);
+			mount_component(icon, a, null);
+			append_hydration(a, t2);
+			append_hydration(a, span0);
 			append_hydration(span0, t3);
 			append_hydration(div2, t4);
 			append_hydration(div2, hr);
@@ -3055,11 +3033,6 @@ function create_fragment(ctx) {
 			append_hydration(span1, t6);
 			append_hydration(span1, t7);
 			append_hydration(div1, t8);
-			append_hydration(div1, span2);
-			append_hydration(span2, a1);
-			append_hydration(a1, t9);
-			append_hydration(span2, t10);
-			append_hydration(div1, t11);
 			append_hydration(div1, ul);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3074,8 +3047,8 @@ function create_fragment(ctx) {
 			if (!current || dirty & /*heading*/ 2) set_data(t0, /*heading*/ ctx[1]);
 			if (!current || dirty & /*email*/ 1) set_data(t3, /*email*/ ctx[0]);
 
-			if (!current || dirty & /*email*/ 1 && a0_href_value !== (a0_href_value = "mailto:" + /*email*/ ctx[0])) {
-				attr(a0, "href", a0_href_value);
+			if (!current || dirty & /*email*/ 1 && a_href_value !== (a_href_value = "mailto:" + /*email*/ ctx[0])) {
+				attr(a, "href", a_href_value);
 			}
 
 			if (dirty & /*social_links*/ 4) {
